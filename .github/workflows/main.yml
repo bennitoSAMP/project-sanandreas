@@ -2,7 +2,7 @@ name: Renew SAMP Server
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 30 minutes       
+    - cron: '*/20 * * * *'  # Every 30 minutes       
 
 jobs:
   renew:
