@@ -2,8 +2,7 @@ name: Renew SAMP Server
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Every 30 minutes
-  workflow_dispatch:         
+    - cron: '*/5 * * * *'  # Every 30 minutes       
 
 jobs:
   renew:
