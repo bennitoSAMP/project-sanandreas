@@ -1,0 +1,15 @@
+name: Renew SAMP Server
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Every 30 minutes
+
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Renewal Request
+        run: |
+          curl -X GET "https://lemehost.com/server/3140364/free_plan?extend_time=1&_pjax=%23p0&_pjax=%23p0" \
+          -H "Cookie: ${{ secrets.SAMP_COOKIE }}" \
+          -H "User-Agent: Mozilla/5.0"
